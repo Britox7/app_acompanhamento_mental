@@ -24,9 +24,9 @@
 
         <!-- Outras Telas -->
         <activity android:name=".NotesActivity" />
-<!--        <activity android:name=".PsychologistListActivity" />-->
-<!--        <activity android:name=".EmotionRegistryActivity" />-->
-<!--        <activity android:name=".EmotionHistoryActivity" />-->
+        <activity android:name=".PsychologistsActivity" />
+        <activity android:name=".EmotionRegistryActivity" />
+        <activity android:name=".EmotionHistoryActivity" />
 
     </application>
 

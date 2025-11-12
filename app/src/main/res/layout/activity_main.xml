@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="#EAF2F8"
     android:padding="24dp"
     tools:context=".MainActivity">
 
@@ -32,7 +31,7 @@
         android:text="Bem-Estar Emocional"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#2C3E50"
+        android:textColor="#1A5276"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_logo" />
@@ -45,7 +44,7 @@
         android:layout_marginTop="8dp"
         android:text="Cuide da sua saúde mental"
         android:textSize="16sp"
-        android:textColor="#7F8C8D"
+        android:textColor="#5D6D7E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title" />
@@ -61,17 +60,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Botão 1: Diário de Emoções -->
+        <!-- Card: Diário de Emoções -->
         <androidx.cardview.widget.CardView
             android:id="@+id/card_emotions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground">
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -100,7 +97,7 @@
                         android:text="Diário de Emoções"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#2C3E50" />
+                        android:textColor="#1A5276" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -108,7 +105,7 @@
                         android:layout_marginTop="4dp"
                         android:text="Registre como você está se sentindo"
                         android:textSize="14sp"
-                        android:textColor="#7F8C8D" />
+                        android:textColor="#5D6D7E" />
                 </LinearLayout>
 
                 <TextView
@@ -116,21 +113,19 @@
                     android:layout_height="wrap_content"
                     android:text="›"
                     android:textSize="30sp"
-                    android:textColor="#BDC3C7" />
+                    android:textColor="#A9CCE3" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Botão 2: Minhas Anotações -->
+        <!-- Card: Minhas Anotações -->
         <androidx.cardview.widget.CardView
             android:id="@+id/card_notes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground">
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -159,7 +154,7 @@
                         android:text="Minhas Anotações"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#2C3E50" />
+                        android:textColor="#1A5276" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -167,7 +162,7 @@
                         android:layout_marginTop="4dp"
                         android:text="Escreva seus pensamentos livremente"
                         android:textSize="14sp"
-                        android:textColor="#7F8C8D" />
+                        android:textColor="#5D6D7E" />
                 </LinearLayout>
 
                 <TextView
@@ -175,20 +170,18 @@
                     android:layout_height="wrap_content"
                     android:text="›"
                     android:textSize="30sp"
-                    android:textColor="#BDC3C7" />
+                    android:textColor="#A9CCE3" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Botão 3: Psicólogos (ÚLTIMO) -->
+        <!-- Card: Psicólogos -->
         <androidx.cardview.widget.CardView
             android:id="@+id/card_psychologists"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground">
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -217,7 +210,7 @@
                         android:text="Psicólogos"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#2C3E50" />
+                        android:textColor="#1A5276" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -225,7 +218,7 @@
                         android:layout_marginTop="4dp"
                         android:text="Conecte-se com profissionais"
                         android:textSize="14sp"
-                        android:textColor="#7F8C8D" />
+                        android:textColor="#5D6D7E" />
                 </LinearLayout>
 
                 <TextView
@@ -233,7 +226,7 @@
                     android:layout_height="wrap_content"
                     android:text="›"
                     android:textSize="30sp"
-                    android:textColor="#BDC3C7" />
+                    android:textColor="#A9CCE3" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -247,7 +240,7 @@
         android:layout_marginBottom="24dp"
         android:text="Versão 1.0"
         android:textSize="12sp"
-        android:textColor="#BDC3C7"
+        android:textColor="#85929E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

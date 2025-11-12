@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         cardPsychologists.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, PsychologistListActivity.class);
+                Intent intent = new Intent(MainActivity.this, PsychologistsActivity.class);
                 startActivity(intent);
             }
         });
