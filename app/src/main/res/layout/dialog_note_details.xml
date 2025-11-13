@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_rounded"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_dialog_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data da anotação"
+        android:textColor="#2E86C1"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="12dp"
+        android:background="#E0E0E0" />
+
+    <TextView
+        android:id="@+id/tv_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aqui vai o conteúdo da anotação..."
+        android:textColor="#2C3E50"
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp" />
+
+    <ImageButton
+        android:id="@+id/btn_close_dialog"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_circle_bg"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:tint="#2E86C1"
+        android:contentDescription="Fechar" />
+</LinearLayout>

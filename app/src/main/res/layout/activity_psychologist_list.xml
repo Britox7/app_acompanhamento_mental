@@ -1,23 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="#EAF2F8"
+    tools:context=".PsychologistsActivity">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
+    <!-- 🔹 Toolbar (AppBar) -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Psicólogos disponíveis"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:paddingBottom="8dp"/>
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:elevation="6dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
+        <!-- Botão de voltar fixo no canto esquerdo -->
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_circle_bg"
+            android:padding="8dp"
+            android:contentDescription="Voltar"
+            android:tint="#2E86C1"
+            android:src="@android:drawable/ic_menu_revert" />
+
+        <!-- Título centralizado na barra -->
+        <TextView
+            android:id="@+id/tv_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Emoções diárias"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50" />
+    </RelativeLayout>
+
+
+    <!-- 🔹 Conteúdo -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_psychologists"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:padding="16dp" />
 
 </LinearLayout>

@@ -2,7 +2,7 @@ package com.example.acompanhamentomentalandroidtrabalho;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,11 +16,19 @@ public class PsychologistsActivity extends AppCompatActivity {
     private RecyclerView rvPsychologists;
     private List<Psychologist> psychologistList;
     private PsychologistAdapter adapter;
+    private ImageButton btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_psychologist_list);
+
+        // 🔹 Referência do botão de voltar
+        btnBack = findViewById(R.id.btn_back);
+
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> onBackPressed());
+        }
 
         rvPsychologists = findViewById(R.id.rv_psychologists);
         rvPsychologists.setLayoutManager(new LinearLayoutManager(this));

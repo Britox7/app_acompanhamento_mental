@@ -59,11 +59,27 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
 
         // 👁️ Clique para visualizar a anotação em um pop-up
         holder.itemView.setOnClickListener(v -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            builder.setTitle("Anotação - " + note.getDate());
-            builder.setMessage(note.getContent());
-            builder.setPositiveButton("Fechar", null);
-            builder.show();
+            // 🎨 Layout customizado para o diálogo
+            View dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_note_details, null);
+            AlertDialog dialog = new AlertDialog.Builder(context)
+                    .setView(dialogView)
+                    .create();
+
+// Define os textos
+            TextView tvDate = dialogView.findViewById(R.id.tv_dialog_date);
+            TextView tvContent = dialogView.findViewById(R.id.tv_dialog_content);
+            ImageButton btnClose = dialogView.findViewById(R.id.btn_close_dialog);
+
+            tvDate.setText("Anotação - " + note.getDate());
+            tvContent.setText(note.getContent());
+
+// Botão de fechar
+            btnClose.setOnClickListener(v2 -> dialog.dismiss());
+
+// Mostra o pop-up
+            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+            dialog.show();
+
         });
     }
 
