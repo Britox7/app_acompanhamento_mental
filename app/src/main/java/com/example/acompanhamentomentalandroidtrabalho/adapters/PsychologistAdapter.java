@@ -1,14 +1,18 @@
 package com.example.acompanhamentomentalandroidtrabalho.adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.acompanhamentomentalandroidtrabalho.R;
 import com.example.acompanhamentomentalandroidtrabalho.models.Psychologist;
+
 import java.util.List;
 
 public class PsychologistAdapter extends RecyclerView.Adapter<PsychologistAdapter.PsychologistViewHolder> {
@@ -17,10 +21,12 @@ public class PsychologistAdapter extends RecyclerView.Adapter<PsychologistAdapte
         void onConnectClick(Psychologist psychologist);
     }
 
-    private List<Psychologist> psychologistList;
-    private OnConnectClickListener listener;
+    private final Context context;
+    private final List<Psychologist> psychologistList;
+    private final OnConnectClickListener listener;
 
-    public PsychologistAdapter(List<Psychologist> psychologistList, OnConnectClickListener listener) {
+    public PsychologistAdapter(Context context, List<Psychologist> psychologistList, OnConnectClickListener listener) {
+        this.context = context;
         this.psychologistList = psychologistList;
         this.listener = listener;
     }
@@ -28,7 +34,7 @@ public class PsychologistAdapter extends RecyclerView.Adapter<PsychologistAdapte
     @NonNull
     @Override
     public PsychologistViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
+        View view = LayoutInflater.from(context)
                 .inflate(R.layout.item_psychologist, parent, false);
         return new PsychologistViewHolder(view);
     }
@@ -39,7 +45,9 @@ public class PsychologistAdapter extends RecyclerView.Adapter<PsychologistAdapte
         holder.tvName.setText(psychologist.getName());
         holder.tvDescription.setText(psychologist.getDescription());
 
-        holder.btnConnect.setOnClickListener(v -> listener.onConnectClick(psychologist));
+        holder.btnConnect.setOnClickListener(v -> {
+            listener.onConnectClick(psychologist);
+        });
     }
 
     @Override
