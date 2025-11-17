@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EAF2F8"
+    android:background="#2FA0F0"
     tools:context=".EmotionActivity">
 
     <!-- Header -->
@@ -13,23 +13,23 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="#FFFFFF"
-        android:elevation="6dp"
+        android:padding="20dp"
+        android:background="#FFFF"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
         <!-- Botão de voltar fixo no canto esquerdo -->
         <ImageButton
             android:id="@+id/btn_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:background="@drawable/btn_circle_bg"
             android:padding="8dp"
+            android:layout_marginTop="15dp"
             android:contentDescription="Voltar"
-            android:tint="#2E86C1"
-            android:src="@android:drawable/ic_menu_revert" />
+            android:tint="#020000"
+            android:src="@drawable/back_icon" />
 
         <!-- Título centralizado na barra -->
         <TextView
@@ -39,8 +39,9 @@
             android:layout_centerInParent="true"
             android:text="Emoções diárias"
             android:textSize="22sp"
+            android:layout_marginTop="15dp"
             android:textStyle="bold"
-            android:textColor="#2C3E50" />
+            android:textColor="#000000" />
     </RelativeLayout>
 
 
@@ -66,7 +67,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="#1A5276"
+            android:textColor="#FFFFFF"
             android:layout_marginBottom="24dp" />
 
         <Spinner
@@ -84,7 +85,7 @@
             android:layout_height="wrap_content"
             android:text="Salvar Sentimento"
             android:textAllCaps="false"
-            android:backgroundTint="#1A5276"
+            android:backgroundTint="#000000"
             android:textColor="#FFFFFF"
             android:elevation="4dp"
             android:padding="12dp"
@@ -92,13 +93,23 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-medium" />
 
+        <Button
+            android:id="@+id/btn_go_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver Histórico"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="12dp"/>
+
+
         <TextView
             android:id="@+id/tv_footer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cuide da sua mente 💙"
             android:textSize="14sp"
-            android:textColor="#5D6D7E"
+            android:textColor="#FFFFFF"
             android:layout_marginTop="32dp"
             android:gravity="center" />
     </LinearLayout>

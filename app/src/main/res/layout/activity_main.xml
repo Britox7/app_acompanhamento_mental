@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EAF2F8"
+    android:background="#2FA0F0"
     android:padding="24dp"
     tools:context=".MainActivity">
 
@@ -31,7 +31,7 @@
         android:text="Bem-Estar Emocional"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#1A5276"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_logo" />
@@ -44,7 +44,7 @@
         android:layout_marginTop="8dp"
         android:text="Cuide da sua saúde mental"
         android:textSize="16sp"
-        android:textColor="#5D6D7E"
+        android:textColor="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title" />
@@ -68,7 +68,7 @@
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="6dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#000000">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -97,7 +97,7 @@
                         android:text="Diário de Emoções"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#1A5276" />
+                        android:textColor="#009CFF" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
                         android:layout_marginTop="4dp"
                         android:text="Registre como você está se sentindo"
                         android:textSize="14sp"
-                        android:textColor="#5D6D7E" />
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <TextView
@@ -113,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:text="›"
                     android:textSize="30sp"
-                    android:textColor="#A9CCE3" />
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -125,7 +125,7 @@
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="6dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#000000">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -154,7 +154,7 @@
                         android:text="Minhas Anotações"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#1A5276" />
+                        android:textColor="#009CFF" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -162,7 +162,7 @@
                         android:layout_marginTop="4dp"
                         android:text="Escreva seus pensamentos livremente"
                         android:textSize="14sp"
-                        android:textColor="#5D6D7E" />
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <TextView
@@ -170,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:text="›"
                     android:textSize="30sp"
-                    android:textColor="#A9CCE3" />
+                    android:textColor="#ffff" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -181,7 +181,7 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
             app:cardElevation="6dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#000000">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -210,7 +210,7 @@
                         android:text="Psicólogos"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#1A5276" />
+                        android:textColor="#009CFF" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -218,7 +218,7 @@
                         android:layout_marginTop="4dp"
                         android:text="Conecte-se com profissionais"
                         android:textSize="14sp"
-                        android:textColor="#5D6D7E" />
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <TextView
@@ -226,7 +226,7 @@
                     android:layout_height="wrap_content"
                     android:text="›"
                     android:textSize="30sp"
-                    android:textColor="#A9CCE3" />
+                    android:textColor="#ffff" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -240,7 +240,7 @@
         android:layout_marginBottom="24dp"
         android:text="Versão 1.0"
         android:textSize="12sp"
-        android:textColor="#85929E"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

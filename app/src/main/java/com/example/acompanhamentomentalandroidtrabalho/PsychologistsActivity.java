@@ -52,5 +52,20 @@ public class PsychologistsActivity extends AppCompatActivity {
         psychologistList.add(new Psychologist("Dr. João Pereira", "Psicólogo - Terapia humanista"));
         psychologistList.add(new Psychologist("Dra. Maria Lima", "Psicanalista - Atendimento adulto e adolescente"));
         psychologistList.add(new Psychologist("Dr. Lucas Fernandes", "Terapia breve e acompanhamento emocional"));
+        psychologistList.add(new Psychologist("Dra. Camila Ribeiro", "Especialista em ansiedade e depressão"));
+        psychologistList.add(new Psychologist("Dr. Rafael Mendes", "Psicólogo clínico - Terapia comportamental"));
+        psychologistList.add(new Psychologist("Dra. Patrícia Moura", "Terapia para relacionamentos e autoconhecimento"));
+        psychologistList.add(new Psychologist("Dr. Felipe Santos", "Psicologia positiva e desenvolvimento emocional"));
+        psychologistList.add(new Psychologist("Dra. Larissa Azevedo", "Terapia infantil e orientação familiar"));
+        psychologistList.add(new Psychologist("Dr. Gustavo Nunes", "Acompanhamento psicológico adulto"));
+        psychologistList.add(new Psychologist("Dra. Juliana Rocha", "Psicóloga - Terapia cognitiva focada em trauma"));
+        psychologistList.add(new Psychologist("Dr. Marcos Albuquerque", "Psicólogo esportivo e motivacional"));
+        psychologistList.add(new Psychologist("Dra. Renata Siqueira", "Especialista em saúde mental e bem-estar"));
+        psychologistList.add(new Psychologist("Dr. André Carvalho", "Psicanalista - Atendimento clínico"));
+        psychologistList.add(new Psychologist("Dra. Beatriz Farias", "Psicoterapia para autoestima e identidade"));
+        psychologistList.add(new Psychologist("Dr. Thiago Monteiro", "Acompanhamento emocional e suporte psicológico"));
+        psychologistList.add(new Psychologist("Dra. Carolina Freitas", "Psicóloga infantil e adolescente"));
+        psychologistList.add(new Psychologist("Dr. Eduardo Matos", "Psicólogo clínico - Terapia integrativa"));
+        psychologistList.add(new Psychologist("Dra. Sofia Mendes", "Terapia humanizada e acolhimento emocional"));
     }
 }

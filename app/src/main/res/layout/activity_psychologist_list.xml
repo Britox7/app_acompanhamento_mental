@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#EAF2F8"
+    android:background="#2FA0F0"
     tools:context=".PsychologistsActivity">
 
     <!-- 🔹 Toolbar (AppBar) -->
@@ -13,7 +13,7 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="20dp"
         android:background="#FFFFFF"
         android:elevation="6dp"
         xmlns:android="http://schemas.android.com/apk/res/android">
@@ -21,15 +21,16 @@
         <!-- Botão de voltar fixo no canto esquerdo -->
         <ImageButton
             android:id="@+id/btn_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:background="@drawable/btn_circle_bg"
             android:padding="8dp"
+            android:layout_marginTop="15dp"
             android:contentDescription="Voltar"
-            android:tint="#2E86C1"
-            android:src="@android:drawable/ic_menu_revert" />
+            android:tint="#000000"
+            android:src="@drawable/back_icon" />
 
         <!-- Título centralizado na barra -->
         <TextView
@@ -37,9 +38,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Emoções diárias"
+            android:text="Conecte-se"
             android:textSize="22sp"
             android:textStyle="bold"
+            android:layout_marginTop="15dp"
             android:textColor="#2C3E50" />
     </RelativeLayout>
 

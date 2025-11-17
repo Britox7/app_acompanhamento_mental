@@ -26,6 +26,7 @@ public class EmotionRegistryActivity extends AppCompatActivity {
 
     private Spinner spinnerEmotions;
     private Button btnSaveEmotion;
+    private Button btnGoHistory;
     private ImageButton btnBack;
     private SharedPreferences sharedPreferences;
 
@@ -41,33 +42,60 @@ public class EmotionRegistryActivity extends AppCompatActivity {
 
         spinnerEmotions = findViewById(R.id.spinner_emotions);
         btnSaveEmotion = findViewById(R.id.btn_save_emotion);
-        btnBack = findViewById(R.id.btn_back); // 🔹 referência ao botão de voltar
+        btnGoHistory = findViewById(R.id.btn_go_history);
+        btnBack = findViewById(R.id.btn_back);
 
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         loadEmotions();
 
-        // Spinner padrão sem personalização
-        String[] emotions = {"Feliz 😊", "Triste 😢", "Ansioso 😰", "Calmo 😌", "Irritado 😠", "Cansado 😴", "Motivado 💪"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, emotions);
+        // ⬇️ SPINNER CUSTOMIZADO — ESTA É A ALTERAÇÃO QUE VOCÊ PEDIU
+        String[] emotions = {
+                "Feliz 😊",
+                "Triste 😢",
+                "Ansioso 😰",
+                "Calmo 😌",
+                "Irritado 😠",
+                "Cansado 😴",
+                "Motivado 💪"
+        };
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this,
+                R.layout.spinner_item,
+                emotions
+        );
+
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown);
         spinnerEmotions.setAdapter(adapter);
+        // ⬆️ FIM DA PARTE IMPLEMENTADA
 
-        // 🔹 Botão "Salvar"
         btnSaveEmotion.setOnClickListener(v -> saveEmotion());
-
-        // 🔹 Botão "Voltar"
         btnBack.setOnClickListener(v -> finish());
+
+        btnGoHistory.setOnClickListener(v -> {
+            Intent intent = new Intent(this, EmotionHistoryActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void loadEmotions() {
         String json = sharedPreferences.getString(KEY_EMOTION_LIST, "[]");
         Type type = new TypeToken<List<Emotion>>() {}.getType();
         emotionList = new Gson().fromJson(json, type);
+
         if (emotionList == null) emotionList = new ArrayList<>();
     }
 
     private void saveEmotion() {
         String selectedEmotion = spinnerEmotions.getSelectedItem().toString();
         String date = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
+
+        for (Emotion emotion : emotionList) {
+            if (emotion.getDate().equals(date)) {
+                Toast.makeText(this, "Você já registrou um sentimento hoje!", Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
 
         emotionList.add(0, new Emotion(selectedEmotion, date));
 

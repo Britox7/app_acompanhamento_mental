@@ -3,31 +3,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#FFFFFF">
+    android:padding="0dp"
+    android:background="#2FA0F0">
 
-    <ImageButton
-        android:id="@+id/btn_back"
-        android:src="@android:drawable/ic_menu_revert"
-        android:background="@android:color/transparent"
-        android:contentDescription="Voltar"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="start"
-        />
-
-    <TextView
-        android:id="@+id/tv_title_history"
+    <!-- HEADER com seta + título centralizado -->
+    <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Histórico de Sentimentos"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginVertical="12dp" />
+        android:padding="20dp"
+        android:background="#FFFFFF"
+        android:elevation="6dp">
 
+        <!-- Botão de voltar fixo no canto esquerdo -->
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_circle_bg"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Voltar"
+            android:tint="#020000"
+            android:src="@drawable/back_icon" />
+
+        <!-- Título centralizado na top bar -->
+        <TextView
+            android:id="@+id/tv_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Suas emoções"
+            android:textSize="22sp"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_clear_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apagar histórico"
+        android:layout_margin="16dp"
+        android:backgroundTint="#000000"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+
+
+    <!-- Lista -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_emotions"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:padding="16dp" />
 </LinearLayout>
