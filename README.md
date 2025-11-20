@@ -29,7 +29,7 @@
 </ul>
 
 <div align="center">
-  <img width="300" src="https://github.com/user-attachments/assets/9c0cb836-2a0d-401a-965b-08186a24a86b" />
+  <img width="300" height="580" alt="Captura de imagem_20251120_191346" src="https://github.com/user-attachments/assets/2be44a16-1263-4f7e-a608-bca154d35858" />
 </div>
 
 <br />
