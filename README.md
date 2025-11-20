@@ -68,4 +68,8 @@
   <img width="300" src="https://github.com/user-attachments/assets/1695c8b1-b3cb-4167-90a2-2b7777932002" />
 </div>
 
+<p>
+  Link para baixar o apk para testes <a><b>https://github.com/Britox7/app_acompanhamento_mental/releases/tag/V.1.0</b></a>
+</p>
+
 <hr />
